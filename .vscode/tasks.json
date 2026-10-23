@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Docusaurus: Start",
+      "type": "npm",
+      "script": "start",
+      "path": "docs",
+      "problemMatcher": []
+    },
+    {
+      "label": "Docusaurus: Stop",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-Command",
+        "$workspace = '${workspaceFolder}\\docs'; $processes = Get-CimInstance Win32_Process | Where-Object { $_.Name -eq 'node.exe' -and $_.CommandLine -and $_.CommandLine.Contains($workspace) -and $_.CommandLine -match 'docusaurus.*start' }; if (-not $processes) { Write-Output 'No Docusaurus process found for this workspace.'; exit 0 }; foreach ($process in $processes) { & taskkill.exe /PID $process.ProcessId /T /F; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE } }"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
