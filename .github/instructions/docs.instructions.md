@@ -9,7 +9,7 @@ description: "Use when creating or editing Docusaurus documentation; maintain th
 
 - Keep internal project documentation in `docs/docs/internal/` and user-facing documentation in `docs/docs/external/`.
 - Divide external documentation into `end-users/` and `developers/`. Write for the named audience; keep internal design details out of external pages.
-- Every documentation folder has an `index.md` that gives a brief overview and lists each document with a one-sentence description. The architecture-decisions folder's index lists every decision record and briefly describes it.
+- Each folder containing documentation pages has an `index.md` that gives a brief overview and lists each page with a one-sentence description. The architecture-decisions folder's index lists every decision record and briefly describes it.
 - Use concise, direct language, descriptive headings, and links to the canonical page instead of duplicating content.
 
 ## Internal arc42 documentation

@@ -1,0 +1,13 @@
+{
+    "servers": {
+        "codebase-memory": {
+            "type": "stdio",
+            "command": "${workspaceFolder}\\.tools\\codebase-memory\\codebase-memory-mcp.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "CBM_CACHE_DIR": "${workspaceFolder}\\.tools\\codebase-memory"
+            }
+        }
+    }
+}
