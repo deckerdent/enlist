@@ -17,6 +17,12 @@ Extensions can be delivered as SCSs and integrated into the portal in several wa
 
 This repository provides the portal and shared tooling. Extension types and integrations can also be developed in other repositories.
 
+## Workspace initialization
+
+After cloning, open the repository root in VS Code and run `/initialize-workspace` from Copilot Chat. The workspace prompt downloads and verifies the local Codebase Memory executable when needed and initializes its ignored runtime settings under `.tools/codebase-memory`.
+
+The MCP registration in [`.vscode/mcp.json`](./.vscode/mcp.json) is committed and workspace-scoped; the executable and cache are local and ignored by Git. The prompt does not modify user-level MCP configuration or index the repository. Start or restart the `codebase-memory` server after setup, then request indexing separately when ready.
+
 ## Repository contents
 
 This is a monorepo for the portal and the tools used to build extensions for it. It brings together:
