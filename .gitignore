@@ -1,0 +1,26 @@
+# Dependencies
+**/node_modules/
+
+# Local tools
+/.tools/
+
+# Generated documentation output
+/docs/build/
+/docs/.docusaurus/
+/docs/.cache-loader/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editor temporary files
+*.swp
+*~

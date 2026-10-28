@@ -1,5 +1,5 @@
 ---
-applyTo: "docs/**"
+applyTo: "docs/docs/**"
 description: "Use when creating or editing Docusaurus documentation; maintain the internal arc42 and external audience structure."
 ---
 
@@ -7,14 +7,14 @@ description: "Use when creating or editing Docusaurus documentation; maintain th
 
 ## Structure and indexes
 
-- Keep project documentation in `docs/internal/` and user-facing documentation in `docs/external/`.
+- Keep internal project documentation in `docs/docs/internal/` and user-facing documentation in `docs/docs/external/`.
 - Divide external documentation into `end-users/` and `developers/`. Write for the named audience; keep internal design details out of external pages.
-- Every documentation folder has an `index.md` that gives a brief overview and lists each document with a one-sentence description. The architecture-decisions folder's index lists every decision record and briefly describes it.
+- Each folder containing documentation pages has an `index.md` that gives a brief overview and lists each page with a one-sentence description. The architecture-decisions folder's index lists every decision record and briefly describes it.
 - Use concise, direct language, descriptive headings, and links to the canonical page instead of duplicating content.
 
 ## Internal arc42 documentation
 
-Keep the arc42 skeleton in `docs/internal/arc42/`. Preserve its section order and give each section its own page:
+Keep the arc42 skeleton in `docs/docs/internal/arc42/`. Preserve its section order and give each section its own page:
 
 1. **Introduction and Goals:** State purpose and scope, key requirements, prioritized quality goals, and stakeholders.
 2. **Architecture Constraints:** Record binding technical, organizational, regulatory, and convention constraints, including their sources.
@@ -33,7 +33,7 @@ Put supporting material in an appendix only when it does not fit a section above
 
 ## Architecture decisions
 
-Store each consequential architecture decision as a separate record in `docs/internal/arc42/architecture-decisions/`. Include its title, status and date, context/problem, decision, considered alternatives, and consequences. Keep records immutable after acceptance; supersede an old decision with a new linked record when it changes.
+Store each consequential architecture decision as a separate record in `docs/docs/internal/arc42/architecture-decisions/`. Include its title, status and date, context/problem, decision, considered alternatives, and consequences. Keep records immutable after acceptance; supersede an old decision with a new linked record when it changes.
 
 ## External documentation
 
